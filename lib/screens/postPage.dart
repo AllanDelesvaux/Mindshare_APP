@@ -26,7 +26,7 @@ class PostPage extends StatefulWidget {
 
 class _PostPageState extends State<PostPage> {
   final List<Post> posts = [];
-  final Map<int, int> commentsCount = {};
+  final Map<int?, int> commentsCount = {};
   final Map<int ,ChatUsers> accounts = {};
 
   Future<void> fetchPost(List<Post> posts) async {
@@ -162,7 +162,7 @@ class _PostPageState extends State<PostPage> {
 
                         children: [
                           Text(
-                            (commentsCount[idAcc].toString() == null ? commentsCount[idAcc].toString() : 0.toString() ) + " Réponses", //Nombre de commentaires aux posts
+                            (commentsCount[posts[index].id_post].toString() == null ? commentsCount[posts[index].id_post].toString() : 0.toString() ) + " Réponses", //Nombre de commentaires aux posts
                             style: TextStyle(fontStyle: FontStyle.italic, color: Colors.grey),
                           ),
                           IconButton(

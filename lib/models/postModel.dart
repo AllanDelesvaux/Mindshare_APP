@@ -1,5 +1,5 @@
 class Post{
-  final int id_post;
+  final int? id_post;
   final int account;
   final String content;
   final String date;
@@ -15,7 +15,7 @@ class Post{
 
   static Post fromJson(Map<String, dynamic> json) {
     return Post(
-      id_post: json['id_post'] as int,
+      id_post: json['id_post'] as int?,
       account: json['id_account'] as int,
       content: json['message'] as String,
       date: json['send_date'] as String,

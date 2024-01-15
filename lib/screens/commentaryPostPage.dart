@@ -6,7 +6,7 @@ import '../models/postModel.dart';
 import 'package:http/http.dart' as http;
 
 class CommentaryPost extends StatefulWidget {
-  int account;
+  int? account;
 
   CommentaryPost({required this.account});
 
