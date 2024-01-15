@@ -127,7 +127,6 @@ class _PostPageState extends State<PostPage> {
                                   },
                                   child : CircleAvatar(
                                     backgroundImage: AssetImage('images/${accounts[idAcc]?.lastName}${accounts[idAcc]?.firstName}.jpg'),
-                                    //NetworkImage("https://images.unsplash.com/photo-1511623785848-021573a3a04f?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"),
                                     maxRadius: 30,
                                   ),
                                 ),
@@ -163,7 +162,7 @@ class _PostPageState extends State<PostPage> {
 
                         children: [
                           Text(
-                          commentsCount[idAcc].toString() + " Réponses", //Nombre de commentaires aux posts
+                            (commentsCount[idAcc].toString() == null ? commentsCount[idAcc].toString() : 0.toString() ) + " Réponses", //Nombre de commentaires aux posts
                             style: TextStyle(fontStyle: FontStyle.italic, color: Colors.grey),
                           ),
                           IconButton(

@@ -4,7 +4,7 @@ class ChatUsers{
   String lastName;
   String firstName;
   int age;
-  String biography;
+  String ?biography;
   ChatUsers({required this.id,required this.lastName,required this.firstName, required this.age, required this.biography});
 
   static ChatUsers fromJson(Map<String, dynamic> json) {
@@ -13,7 +13,7 @@ class ChatUsers{
       lastName: json['last_name'] as String,
       firstName: json['first_name'] as String,
       age: json['years_old'] as int,
-      biography: json['biography'] as String,
+      biography: json['biography'] as String?,
     );
   }
 }
