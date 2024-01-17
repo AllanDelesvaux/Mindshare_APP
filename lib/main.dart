@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
         '/profile': (context) => ProfilePage(account: 1),
       },
 
-      title: 'Flutter Demo',
+      title: 'Mindshare AI',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
