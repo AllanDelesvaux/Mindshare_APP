@@ -162,7 +162,7 @@ class _PostPageState extends State<PostPage> {
 
                         children: [
                           Text(
-                            (commentsCount[posts[index].id_post].toString() == null ? commentsCount[posts[index].id_post].toString() : 0.toString() ) + " Réponses", //Nombre de commentaires aux posts
+                            "${commentsCount[posts[index].id_post].toString()} Réponses", //Nombre de commentaires aux posts
                             style: TextStyle(fontStyle: FontStyle.italic, color: Colors.grey),
                           ),
                           IconButton(
