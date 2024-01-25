@@ -102,6 +102,7 @@ class _PostPageState extends State<PostPage> {
           ),
           body:
           ListView.builder(
+            reverse: true,
             itemCount: posts.length, // Nombre de posts à afficher
             itemBuilder: (context, index) {
               final int idAcc = posts[index].account;
